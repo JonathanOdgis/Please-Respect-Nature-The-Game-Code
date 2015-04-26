@@ -10,14 +10,14 @@ function Update ()
 {
 	if (grabbed == true)   
 	{
-		player.gameObject.transform.position = Vector3.MoveTowards(player.gameObject.transform.position, target.gameObject.transform.position, 3);	
+		player.gameObject.transform.position = Vector3.MoveTowards(player.gameObject.transform.position, Vector3(player.gameObject.transform.position.x , target.gameObject.transform.position.y, player.gameObject.transform.position.z), 1);	
 
 	}
 }
 
 function OnTriggerEnter(other: Collider)
 {
-	if (other.CompareTag('Player'))
+	if (other.CompareTag('Player') && Input.GetKey("w"))
 	{
 		grabbed = true;
 		Debug.Log("It grabbed");

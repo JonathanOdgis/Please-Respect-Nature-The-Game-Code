@@ -28,3 +28,8 @@ function Update ()
 	}
 
 }
+
+function OnGUI()
+{
+	GUI.Box(Rect(230, 10, 100, 25), "Nature Balls" + roundsFired + '/' + roundsMax);	
+}

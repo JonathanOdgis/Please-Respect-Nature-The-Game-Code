@@ -17,7 +17,7 @@ function Update ()
 
 function OnTriggerEnter(other: Collider)
 {
-	if (other.CompareTag('Player'))
+	if (other.CompareTag('Player') && other.CompareTag('projectile'))
 	{
 		hit = true;  
 		yield WaitForSeconds(10);
